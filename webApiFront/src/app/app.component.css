@@ -1,0 +1,33 @@
+.table-responsive {
+  width: 50%;
+  overflow-x: auto;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+th {
+  background-color: gray;
+  color: white;
+  width: 10%;
+}
+
+td {
+  width: 50%;
+}
+
+tbody tr:nth-child(even) {
+  background-color: lightgray;
+  color: black;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+  color: black;
+}

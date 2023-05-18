@@ -1,57 +1,25 @@
 <h1 id="tableLabel">Chamada de API</h1>
 
 <button (click)="getFamilies()">Get Familes from Brazilian Flora </button>
-
+<p></p>
 <div *ngIf="error">{{ error }}</div>
 
-<div class="table-responsive">
-    <table class="center table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2"  scope="col">#</th>
-                <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2"  scope="col">Family</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let family of family.result; let i = index" class="row py-2">
-                <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2" scope="row"> {{i+1}}</th>
-                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >{{family}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-    <!--<div class="container">
-        <table class="table table-striped">
+<div>
+    <div class="table-responsive">
+        <table class="center table table-striped">
             <thead>
                 <tr>
-                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <th>#</th>
                     <th>Family</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let family of family.result">
-                    <td mat-cell *matCellDef="let element;let i=index"> {{i+1}} </td>
+                <tr *ngFor="let family of family.result; let i = index">
+                    <td>{{i+1}}</td>
                     <td>{{family}}</td>
                 </tr>
             </tbody>
         </table>
-    </div>-->
-    <!--<div class="container grid-striped">
-        <div class="row font-weight-bold py-2">
-            <div class="col">
-                Number
-            </div>
-            <div class="col">
-                Family
-            </div>
-        </div>
-        <div *ngFor="let family of family.result; let i = index" class="row py-2">
-            <div class="col">
-                {{i+1}}
-            </div>
-            <div class="col">
-                {{family}}
-            </div>
-        </div>
-    </div>-->
+    </div>
+</div>
+
